@@ -16,10 +16,10 @@
     "devDependencies": {},
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/imlinhanchao/translate-node.git"
+        "url": "git+https://github.com/imlinhanchao/translator-promise.git"
     },
     "bugs": {
-        "url": "https://github.com/imlinhanchao/translate-node/issues"
+        "url": "https://github.com/imlinhanchao/translator-promise/issues"
     },
-    "homepage": "https://github.com/imlinhanchao/translate-node#readme"
+    "homepage": "https://github.com/imlinhanchao/translator-promise#readme"
 }

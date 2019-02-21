@@ -9,7 +9,7 @@ npm install translate-node
 ## Usage
 
 ```javascript
-const translate = require('translate-node');
+const translate = require('translator-promise');
 // async/await. The second parameter can be a language name (ISO 639-1)
 const result = await translate('Hello world', 'ja');
 console.log(result); 

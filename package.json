@@ -1,0 +1,25 @@
+{
+    "name": "translate-node",
+    "version": "1.0.0",
+    "description": "A node module based on Google Translate.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Hancel.Lin",
+    "license": "ISC",
+    "dependencies": {
+        "request": "^2.88.0",
+        "request-promise": "^4.2.2",
+        "urlencode": "^1.1.0"
+    },
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/imlinhanchao/translate-node.git"
+    },
+    "bugs": {
+        "url": "https://github.com/imlinhanchao/translate-node/issues"
+    },
+    "homepage": "https://github.com/imlinhanchao/translate-node#readme"
+}

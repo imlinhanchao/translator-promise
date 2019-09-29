@@ -2,6 +2,14 @@
     "name": "translator-promise",
     "version": "1.0.3",
     "description": "A node module based on Google Translate.",
+    "keywords": [
+      "translate",
+      "translator",
+      "google",
+      "chinese",
+      "promise",
+      "language"
+    ],
     "main": "index.js",
     "scripts": {
         "test": "node test.js"
@@ -17,7 +25,8 @@
         "url": "git+https://github.com/imlinhanchao/translator-promise.git"
     },
     "bugs": {
-        "url": "https://github.com/imlinhanchao/translator-promise/issues"
+        "url": "https://github.com/imlinhanchao/translator-promise/issues",
+        "email": "imlinhanchao@gmail.com"
     },
     "homepage": "https://github.com/imlinhanchao/translator-promise#readme"
 }

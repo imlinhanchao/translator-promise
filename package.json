@@ -1,19 +1,17 @@
 {
     "name": "translator-promise",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A node module based on Google Translate.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "node test.js"
     },
     "author": "Hancel.Lin",
     "license": "ISC",
-    "dependencies": {
-        "request": "^2.88.0",
-        "request-promise": "^4.2.2",
-        "urlencode": "^1.1.0"
+    "dependencies": {},
+    "devDependencies": {
+        "tape": "~1.1.0"
     },
-    "devDependencies": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/imlinhanchao/translator-promise.git"

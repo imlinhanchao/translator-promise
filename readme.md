@@ -3,7 +3,7 @@ A node module to translate. There is power by Google Translate.
 
 ## Installation
 ```bash
-npm install translate-node
+npm install translator-promise
 ```
 
 ## Usage
@@ -63,7 +63,7 @@ translate('word', 'ja');
 
 // {
 //     "word": "word",
-//     "text": "ワード",
+//     "text": "語",
 //     "candidate": [
 //         "ワード",
 //         "単語",
@@ -72,7 +72,8 @@ translate('word', 'ja');
 //         "語句",
 //         "伝言",
 //         "一言半句",
-//         "口舌"
+//         "口舌",
+//         "一言"
 //     ]
 // }
 

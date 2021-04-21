@@ -7,7 +7,7 @@ async function getTkk() {
     let url = 'https://translate.google.cn/';
     let body = await get(url);
     let tkkMat = body.match(/tkk:'([\d.]+)'/);
-    tkk = tkkMat[1];
+    tkk = tkkMat ? tkkMat[1] : tkk;
 }
 
 getTkk();
@@ -29,15 +29,7 @@ function Io(a, b) {
 }
 
 function tk(a, tkk) {
-    if (null !== Jo)
-        var b = Jo;
-    else {
-        b = Ho(String.fromCharCode(84));
-        var c = Ho(String.fromCharCode(75));
-        b = [b(), b()];
-        b[1] = c();
-        b = (Jo = tkk || "") || "";
-    }
+    var b = tkk || ''
     var d = Ho(String.fromCharCode(116));
     c = Ho(String.fromCharCode(107));
     d = [d(), d()];
@@ -63,6 +55,20 @@ function tk(a, tkk) {
     a %= 1E6;
     return c + (a.toString() + "." + (a ^ b));
 };
+
+function getCandidate(tran) {
+    let words = []
+    if (tran[1]) words = words.concat(tran[1][0][1])
+    if (tran[5]) {
+        let candidates = tran[5].map(tt => (tt[2] || [tt[0]]).map(t => t[0]));
+        let maxLength = Math.max(...candidates.map(c => c.length));
+        for (let i = 0; i < maxLength; i++) {
+            let candidate = candidates.map(c => c[i] || c[c.length - 1]).join('').trim();
+            if(words.indexOf(candidate) < 0) words.push(candidate);
+        }
+    }
+    return words;
+}
 
 function get(url) {
     return new Promise(function (resolve, reject){
@@ -90,13 +96,6 @@ function get(url) {
             })
         });
     });
-}
-
-function getCandidate(tran) {
-    let words = [];
-    if(tran[1]) words = words.concat(tran[1][0][1]);
-    if(tran[5]) words = words.concat(tran[5][0][2].map(t => t[0]).filter(t => !words.find(w => w == t)))
-    return words;
 }
 
 async function translate(word, lang) {

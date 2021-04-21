@@ -1,6 +1,6 @@
 {
     "name": "translator-promise",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "description": "A node module based on Google Translate.",
     "keywords": [
       "translate",
